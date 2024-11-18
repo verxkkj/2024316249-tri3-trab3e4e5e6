@@ -5,31 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galeria</title>
-  <link rel="stylesheet" href="assets/main.css">
   <link rel="stylesheet" href="assets/responsive-grid.css">
-  <link rel="stylesheet" href="assets/varela-theme.css">
-  <script defer src="main.js" defer></script>
+  <link rel="stylesheet" href="assets/main.css">
+  <script defer src="/assets/main.js" defer></script>
 </head>
 
 <body>
-  <header id="top">
-    <h1>Gatos</h1>
-  </header>
   <aside>
-    <nav class="box perfil">
-      <img src="./assets/img/gatoburrito.jpeg">
+    <div>
+      <nav class="box perfil">
+        <img src="./assets/img/gatoburrito.jpeg">
       <h1>Veronica Balke</h1>
-  </nav>
-  <div id="links" class="box">
-          <p>Redes sociais: <a href="https://instagram.com/verxkkj">Instagram</a></p> 
+    </nav>
+    <h2>Redes Sociais</h2>
+    <p><a href="https://instagram.com/verxkkj">Instagram</a></p> 
+    <h2>Menu</h2>
+      <a href="#FridaEFrederico">Frida e Frederico</a>
+      <a href="#Frida">Frida</a>
+      <a href="#Frederico">Frederico</a>
+      <a href="/chat/index.html">Bora conversar Miguxos</a>
   </div>
-    <h1>MENU:</h1>
-    <ul>
-      <li><a href="#FridaEFrederico">Frida e Frederico</a></li>
-      <li><a href="#Frida">Frida</a></li>
-      <li><a href="#Frederico">Frederico</a></li>
-      <li><a href="#chat.html">Bora conversar Miguxos</a></li>
-    </ul>
   </aside>  
   <main>
     <h2>Frida e Frederico</h2>
@@ -99,11 +94,8 @@
           </footer>
 
 
-    <dialog class="gallery-image-modal">
-      <button class="bt-close"></button>
-      <div class="content"></div>
-      <button class="bt-prev"><<</button>
-      <button class="bt-next">>></button>
-    </dialog>
-
+          <dialog id="imagePopup">
+            <p><button id="ipClose">Fechar</button> | <a id="ipImageLink">nomedaimagem.png</a></p>
+            <div id="popupContent"></div>
+        </dialog>
   </body>

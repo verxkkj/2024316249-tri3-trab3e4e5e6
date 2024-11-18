@@ -1,7 +1,3 @@
-header {
-  grid-area: header;
-}
-
 aside {
   grid-area: aside;
 }
@@ -17,32 +13,31 @@ footer {
 body {
   display: grid;
   grid-template-columns: 250px 1fr;
-  grid-template-rows: 20vh 1fr 100px;
-  grid-template-areas: "header header" "aside  content" "footer footer";
+  grid-template-rows: 1fr 50px;
+  grid-template-areas: "aside  content" "footer footer";
   min-height: 100vh;
   margin: 0;
   border: 0;
 }
 nav.perfil img {
   width: 100px;
-  margin-top: -50px;
+  /* margin-top: -50px; */
   border: 4px solid rgb(255, 255, 255);
   border-radius: 50%;
+  transition: .8s;
 }
 
 nav.perfil img:hover {
-  transition: .8s;
   border-radius: 5%;
 }
 
 nav.perfil {
   background-size: cover;
   background-position: center;
-  padding: 20px;
+  border-bottom: 4px solid white;
 }
 
 main .example {
-  border: 1px solid rgb(255, 255, 255);
   padding: 1rem;
   display: grid;
   gap: 1rem;
@@ -56,6 +51,12 @@ main .example > div {
   position: relative;
   overflow: hidden;
   transition: ease-in-out .3s;
+  border-radius: 10px;
+}
+
+aside > div {
+  position: sticky;
+  top: 0;
 }
 
 main .example > div:hover {
@@ -63,7 +64,7 @@ main .example > div:hover {
   z-index: 99;
   box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 0;
 }
 
 main .example > div:first-child {
@@ -74,41 +75,6 @@ main .example > div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.gallery-image-modal {
-  border-radius: 5px;
-  border: 1px solid rgb(255, 255, 255);
-  position: fixed;
-  overflow: unset;
-}
-
-.gallery-image-modal::backdrop {
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(2px);
-}
-
-.gallery-image-modal .bt-close {
-  --size: 3rem;
-  --translate: calc(var(--size) / 3 * -1);
-  height: var(--size);
-  width: var(--size);
-  border-radius: 50%;
-  color: transparent;
-  position: absolute;
-  right: var(--translate);
-  top: var(--translate);
-}
-
-.gallery-image-modal .bt-close::after {
-  content: "✕";
-  color: red;
-  font-size: calc(var(--size) / 2);
-}
-
-.gallery-image-modal .content img {
-  max-height: 90vh;
-  max-width: 100%;
 }
 
 @media screen and (max-width: 600px) {

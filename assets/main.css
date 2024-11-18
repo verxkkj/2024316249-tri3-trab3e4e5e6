@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
@@ -18,8 +17,8 @@ body {
 
 
 header {
-  background-image: linear-gradient(120deg, rgb(255, 69, 153), rgb(255, 255, 255));
-  margin-bottom: 1rem;
+  background-color: rgb(255, 107, 157);
+  /* margin-bottom: 1rem; */
   transform-origin: 0 0;
   color: #FFF;
   padding: 2rem 5rem;
@@ -88,10 +87,8 @@ main .gallery:hover>div:not(:hover) {
 }
 
 aside {
-  background-color: transparent;
+  background-color: rgb(255, 107, 157);
   border-right: 1px solid #ffffff;
-  background-image: linear-gradient(120deg, rgb(255, 69, 153), rgb(255, 255, 255));
-  margin-bottom: 1rem;
   transform-origin: 0 0;
   color: #FFF;
   padding: 1rem 2rem;
@@ -113,8 +110,13 @@ aside a {
   transition: .2s;
 }
 
+a {
+  color: white;
+}
+
 aside a:hover {
   background-color: rgb(255, 255, 255);
+  color: black;
 }
 
 dialog {
@@ -134,4 +136,37 @@ dialog {
 
 footer {
   text-align: center;
+  background-color: rgb(255, 107, 157);
+}
+
+#imagePopup {
+  background-color: rgb(255, 107, 157);
+  border-radius: 5px;
+  border: 2px solid pink;
+}
+
+#popupImage {
+  max-height: 50vh;
+  max-width: 80vw;
+  border-radius: 5px;
+  border: 2px solid pink;
+
+}
+
+#ipImageLink {
+  color: black;
+}
+
+#ipClose {
+  background-color: pink;
+  border-radius: 5px;
+  border: 1px solid pink;
+}
+
+#ipImageLink:hover {
+  color: gray;
+}
+
+main h2 {
+  margin-left: 20px;
 }

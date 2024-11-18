@@ -1,31 +1,18 @@
-document.querySelectorAll("[data-folder]").forEach(el => {
-    const total = el.dataset.total
-    const folder = el.dataset.folder
-    let html = ''
-    for (let i = 1; i <= total; i++) {
-      html += `
-        <div>
-          <img src="imgs/${folder}/${folder} (${i}).jpg">
-        </div>    main .box-perfil > aside {
-  
-}
-      `
-    }
-    el.innerHTML = html
+const galleryImages = document.querySelectorAll('.example img');
+const popupCloseButton = document.querySelector('#ipClose');
+const popupImageLink = document.querySelector('#ipImageLink');
+const popup = document.querySelector('#imagePopup')
+const popupContent = document.querySelector('#popupContent')
+
+popupCloseButton.addEventListener('click', () => {
+    popup.close()
   })
   
-  const galleryImageModal = document.querySelector('.gallery-image-modal')
-  const galleryBtClose = galleryImageModal.querySelector('.bt-close')
-  const galleryContent = galleryImageModal.querySelector('.content')
-  const imgs = document.querySelectorAll('.gallery img')
-  
-  galleryBtClose.addEventListener('click', () => {
-    galleryImageModal.close()
-  })
-  
-  imgs.forEach(img => {
+  galleryImages.forEach(img => {
     img.addEventListener('click', () => {
-      galleryContent.innerHTML = `<img src="${img.src}">`
-      galleryImageModal.showModal()
+      popupContent.innerHTML = `<img src="${img.src}" id="popupImage">`
+      popupImageLink.setAttribute('href', img.src)
+      popupImageLink.textContent = img.src.substring(img.src.lastIndexOf('/') + 1)
+      popup.showModal()
     })
   })

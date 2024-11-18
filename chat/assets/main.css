@@ -1,0 +1,72 @@
+body {
+    background-color: pink;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+}
+
+a {
+    color: palevioletred;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+#everythingHelper::before {
+    content: "";
+    background-image: url(/assets/background.png);
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: .25;
+}
+
+#everythingHelper {
+    max-width: 50vw;
+}
+
+#titleLinks {
+    padding: 0;
+}
+
+#titleLinks * {
+    margin-right: 10px;
+}
+
+#viewCounter {
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    #everythingHelper {
+        max-width: 80vw;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    body {
+        height: auto;
+    }
+
+    #title {
+        text-align: center;
+    }
+
+    #titleLinks {
+        text-align: center;
+    }
+
+    #everythingHelper {
+        max-width: 90vw;
+    }
+}
